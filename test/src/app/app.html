@@ -1,0 +1,14 @@
+<style>
+
+</style>
+
+<main class="main">
+      <app-user-biography></app-user-biography>
+      <app-profile-photo></app-profile-photo>
+
+      <input type="text" name="bio" id="bio" placeholder="Enter Biography" (input)="updateBio(bio.value)" #bio />
+      <button type="button" (click)="updateBio(bio.value)" [attr.disabled]="!bio.value? true : null">Update bio</button>
+</main>
+
+
+<router-outlet />

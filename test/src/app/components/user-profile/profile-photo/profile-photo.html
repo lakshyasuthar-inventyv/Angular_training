@@ -1,0 +1,5 @@
+<p id="title">{{title()}}</p>
+<img src="https://dummyimage.com/600x400/000/fff" alt="" srcset="" id="profile-photo">
+<input type="text" (input)="updateTitle(photoUrl.value)" placeholder="Enter photo URL" #photoUrl />
+<button type="button" (click)="changePhoto(photoUrl.value)" [attr.disabled]="!photoUrl.value? true : null">Change Photo</button>
+
