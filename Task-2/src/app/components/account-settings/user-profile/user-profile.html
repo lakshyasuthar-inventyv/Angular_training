@@ -1,0 +1,10 @@
+<div class="user-profile">
+  <p>User Profile</p>
+  <div class="profile-details">
+    <app-profile-pic></app-profile-pic>
+    <app-user-bio class="user-bio" [userBio]="commonService.getUser().bio || ''"></app-user-bio>
+    <input type="text" placeholder="Update Bio" [(ngModel)]="newBio" />
+    <button (click)="updateBio(newBio)">Change User bio</button>
+    plan: {{commonService.user().plan}}
+  </div>
+</div>

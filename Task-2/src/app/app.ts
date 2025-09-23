@@ -1,0 +1,12 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { AccountSettings } from './components/account-settings/account-settings';
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet,AccountSettings],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly title = signal('Task-2');
+}

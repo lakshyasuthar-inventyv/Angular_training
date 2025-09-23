@@ -1,0 +1,16 @@
+<div class="profile-pic-container">
+  <img [src]="commonService.user().photoUrl" alt="Profile Picture" class="profile-pic">
+
+  <input
+    type="text"
+    placeholder="Image url"
+    [(ngModel)]="newProfilePicUrl"
+    (input)="inputLengthValue.set($event.target.value.length)"
+  >
+
+  <button
+    (click)="updatePic()"
+    [disabled]="inputLengthValue() === 0">
+    Update Pic
+  </button>
+</div>
