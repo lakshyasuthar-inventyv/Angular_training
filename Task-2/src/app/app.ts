@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectorRef, Component, signal } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { OnpushCd } from './components/onpush-cd/onpush-cd';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -14,7 +14,7 @@ import { DataService } from './services/data.service';
   styleUrl: './app.scss',
 })
 export class App {
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService, private cdr: ChangeDetectorRef) {}
   protected readonly title = signal('rendering');
 
   setTab(index: number) {

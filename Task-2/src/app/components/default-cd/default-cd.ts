@@ -16,7 +16,7 @@ export class DefaultCd implements OnInit {
 
   ngOnInit() {
     this.dataService.getObservableStream().subscribe(val => {
-      this.counter = val;
+      this.counter = val-1;
       this.cdr.detectChanges(); // Manual trigger in zoneless environment
     });
   }
