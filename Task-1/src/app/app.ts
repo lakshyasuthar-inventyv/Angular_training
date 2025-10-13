@@ -1,18 +1,12 @@
 import { Component, signal } from '@angular/core';
+import { AccountSettings } from './components/account-settings/account-settings';
 import { RouterOutlet } from '@angular/router';
-import { UserBiography } from './components/user-profile/user-biography/user-biography';
-import { ProfilePhoto } from './components/user-profile/profile-photo/profile-photo';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UserBiography, ProfilePhoto],
+  imports: [AccountSettings,RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected bio = signal('No biography set');
-
-
-  updateBio(newBio: string) {
-    this.bio.set(newBio);
-  }
+  protected readonly title = signal('Task-2');
 }

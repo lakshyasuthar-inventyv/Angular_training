@@ -1,0 +1,85 @@
+.user-profile {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.user-profile p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e293b;
+  margin-bottom: 20px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-bio {
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 400px;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.plan {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+/* Responsive layout */
+@media (max-width: 480px) {
+  .user-profile {
+    padding: 16px;
+  }
+
+  input[type="text"] {
+    max-width: 100%;
+  }
+}

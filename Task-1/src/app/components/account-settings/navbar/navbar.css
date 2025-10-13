@@ -1,0 +1,88 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo / App name */
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #bfdbfe;
+  border-bottom: 2px solid white;
+}
+
+/* Logout button (inside navbar) */
+.navbar button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+}
+
+.navbar button:hover {
+  background-color: white;
+  color: #2563eb;
+}
+
+.navbar button:active {
+  transform: scale(0.97);
+}
+
+/* Responsive navbar */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #1d4ed8;
+    position: absolute;
+    top: 56px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+    padding: 16px 0;
+  }
+
+  .navbar.active .nav-links {
+    display: flex;
+  }
+
+  .navbar button {
+    width: 80%;
+    margin-top: 10px;
+    border: 1px solid #fff;
+  }
+}

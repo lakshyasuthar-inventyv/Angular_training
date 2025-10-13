@@ -1,0 +1,9 @@
+<app-navbar (loggedOut)="handleLogout($event)"></app-navbar>
+
+@if (isLoggedIn) {
+  <div class="account-settings-content">
+    <router-outlet></router-outlet>
+  </div>
+} @else {
+  <p class="login-warning">Please log in to view your account settings. <button (click)="handleLogin(true)">Login</button></p>
+}

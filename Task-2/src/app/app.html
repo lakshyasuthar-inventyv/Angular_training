@@ -1,2 +1,19 @@
-<app-account-settings></app-account-settings>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  Angular 20 — Zoneless Rendering & Change Detection Demo
+</mat-toolbar>
+
+<div class="demo-container">
+  <mat-tab-group (selectedIndexChange)="setTab($event)">
+    <mat-tab label="Default (Observable)">
+
+      <app-default-cd></app-default-cd>
+
+  </mat-tab>
+    <mat-tab label="OnPush (Promise)">
+      <app-onpush-cd></app-onpush-cd>
+    </mat-tab>
+    <mat-tab label="Signals (Zoneless)">
+      <app-signals-cd></app-signals-cd>
+    </mat-tab>
+  </mat-tab-group>
+</div>
