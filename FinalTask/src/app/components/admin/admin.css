@@ -1,0 +1,60 @@
+/* 🔹 Overall container styling */
+:host {
+  display: block;
+  padding: 1.5rem;
+  background-color: #f8fafc; /* light gray background */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* 🔹 Grid wrapper for better layout */
+.ag-theme-alpine {
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  background: white;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* 🔹 Add hover effect for subtle depth */
+.ag-theme-alpine:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 🔹 Grid height & responsiveness */
+.ag-theme-alpine {
+  height: 80vh;  /* make it occupy most of the screen */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* 🔹 Improve header look */
+.ag-header {
+  background-color: #f1f5f9 !important; /* soft gray-blue */
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e293b;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* 🔹 Row hover and selection styling */
+.ag-row-hover {
+  background-color: #f0f9ff !important; /* light blue on hover */
+}
+
+.ag-row-selected {
+  background-color: #dbeafe !important; /* soft blue for selection */
+}
+
+/* 🔹 Cell text */
+.ag-cell {
+  font-size: 14px;
+  color: #334155;
+  padding: 8px;
+}
+
+/* 🔹 Optional: add some animation */
+.ag-row {
+  transition: background-color 0.2s ease;
+}
