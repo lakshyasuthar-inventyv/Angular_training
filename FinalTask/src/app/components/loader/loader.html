@@ -1,0 +1,6 @@
+<div *ngIf="loadingService.isLoading()" class="loader-container">
+  <img src="loading.gif" alt="Loading..." class="loader-gif" />
+
+ </div>
+
+<ng-content *ngIf="!loadingService.isLoading()"></ng-content>

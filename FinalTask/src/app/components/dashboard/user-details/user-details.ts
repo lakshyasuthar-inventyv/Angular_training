@@ -17,7 +17,6 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.userService.getUserDetails(this.id).subscribe((user) => {
-      console.log(user);
       this.user.set(user);
     });
   }
