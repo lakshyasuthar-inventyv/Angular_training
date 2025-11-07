@@ -1,14 +1,21 @@
+<!-- admin.html -->
 <div class="admin-container">
-  <h2 class="admin-title">Admin Dashboard</h2>
+  <ag-grid-angular
+    class="ag-theme-alpine"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="{ sortable: true, filter: true, resizable: true }"
+    style="width: 100%; min-width: 600px; height: 500px;"
+  ></ag-grid-angular>
 
-  <div class="ag-theme-alpine" >
-    <ag-grid-angular
-      [rowData]="rowData"
-      [columnDefs]="columnDefs"
-      [defaultColDef]="{ resizable: true, sortable: true, filter: true }"
-      rowSelection="multiple"
-      animateRows="true"
-      style="width:100%; height:100%;">
-    </ag-grid-angular>
+  <!-- POPUP SECTION -->
+  <div *ngIf="showPopup" class="popup-overlay">
+    <app-update-user
+      [userId]="selectedUser?.id"
+      [userName]="selectedUser?.name"
+      [userEmail]="selectedUser?.email"
+      (close)="closePopup()"
+      (updated)="saveUpdatedUser($event)"
+    ></app-update-user>
   </div>
 </div>

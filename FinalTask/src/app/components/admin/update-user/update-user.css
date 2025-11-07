@@ -1,0 +1,94 @@
+/* Popup wrapper: center content, modern look */
+.popup-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	border-radius: 16px;
+	box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+	padding: 32px 28px 24px 28px;
+	min-width: 320px;
+	max-width: 95vw;
+	position: relative;
+	animation: popupRise 0.25s ease-out;
+}
+
+.popup-wrapper h2 {
+	margin-bottom: 18px;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #0f172a;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 16px;
+	width: 100%;
+}
+
+.field label {
+	font-size: 0.98rem;
+	color: #334155;
+	margin-bottom: 4px;
+	font-weight: 500;
+}
+
+.field input {
+	padding: 7px 10px;
+	border: 1px solid #cbd5e1;
+	border-radius: 7px;
+	font-size: 1rem;
+	background: #f8fafc;
+	transition: border 0.2s;
+}
+.field input:focus {
+	border-color: #38bdf8;
+	outline: none;
+}
+
+.btn-group {
+	display: flex;
+	gap: 12px;
+	margin-top: 10px;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+.btn-group button {
+	padding: 7px 18px;
+	border-radius: 8px;
+	border: none;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	background: #38bdf8;
+	color: #fff;
+	transition: background 0.18s, color 0.18s;
+}
+.btn-group button[disabled] {
+	background: #bae6fd;
+	color: #64748b;
+	cursor: not-allowed;
+}
+.btn-group .cancel-btn {
+	background: #f1f5f9;
+	color: #334155;
+	border: 1px solid #cbd5e1;
+}
+.btn-group .cancel-btn:hover {
+	background: #e2e8f0;
+	color: #0f172a;
+}
+
+@keyframes popupRise {
+	0% {
+		opacity: 0;
+		transform: translateY(40px) scale(0.96);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}

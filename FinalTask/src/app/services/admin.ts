@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AdminService {
-  constructor(private http: HttpClient) {}
+  private http = inject(HttpClient);
 
   adminDashboardData() {
     const localStorageData = localStorage.getItem('userLogs');
@@ -26,7 +26,7 @@ export class AdminService {
 
 
     return this.http
-      .get<any[]>('https://jsonplaceholder.typicode.com/users')
+      .get<any[]>('http://localhost:3000/users')
       .pipe(
         map((data) =>
           data.map((item) => {
@@ -38,5 +38,36 @@ export class AdminService {
           })
         )
       );
+  }
+
+  createUser(id: number) {
+    console.log('Creating user with ID:', id);
+    const userData = this.http.post<any>(`http://localhost:3000/users`, { id });
+    console.log('User data to create:', userData);
+    return this.http
+      .post<any>('http://localhost:3000/users', userData)
+      .pipe(
+        map((data) =>
+          ({
+            ...data,
+          })
+        )
+      );
+  }
+
+  updateUser(id: number, userData: any) {
+    return this.http
+      .put<any>(`http://localhost:3000/users/${id}`, userData)
+      .pipe(
+        map((data) =>
+          ({
+            ...data,
+          })
+        )
+      );
+  }
+
+  deleteUser(id: number) {
+    return this.http.delete<void>(`http://localhost:3000/users/${id}`);
   }
 }

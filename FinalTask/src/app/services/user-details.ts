@@ -13,7 +13,7 @@ export class UserDetailsService {
   getUserDetails(id:string|null) {
     const currentUserId = id || environment.currentUserId;
     return this.http.get<User>(
-      `https://jsonplaceholder.typicode.com/users/${currentUserId}`
+      `http://localhost:3000/users/${currentUserId}`
     );
   }
 }

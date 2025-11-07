@@ -12,7 +12,7 @@ export class UserLocation {
 
    getUserLocation(id:string | null) {
     console.log('Injected user ID from route:', id);
-    const userData = this.http.get(`https://jsonplaceholder.typicode.com/users/${id || environment.currentUserId}`);
+    const userData = this.http.get(`http://localhost:3000/users/${id || environment.currentUserId}`);
     return userData?.pipe(
       map((user: any) => {return {username: user.username, lat: user.address.geo.lat, lng: user.address.geo.lng};})
     );
