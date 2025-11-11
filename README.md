@@ -73,11 +73,11 @@ See `FinalTask/README.md` for instructions.
 
 ## Shared Concepts
 
-- **Comman Folder:** Reusable components, interfaces, and logic for all tasks
+- **Common Folder:** Reusable components, interfaces, and logic for all tasks
 - **CommonModule:** Always import for Angular directives (`*ngIf`, `*ngFor`)
-- **Lifecycle Hooks:** Use for debugging and data fetching
-- **RxJS:** For state management, notifications, and async operations
-- **Signals:** For instant UI updates and reactive state
+- **Lifecycle Hooks:** Use for change detection, cleaning up resources and data fetching
+- **RxJS:** For state management and async operations
+- **Signals:** Signals are a reactive state management feature that lets you store, update, and react to changes in data instantly
 - **Services:** Shared logic and data access
 - **Routing & Guards:** Secure and organize navigation
 
